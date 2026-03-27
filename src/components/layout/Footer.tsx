@@ -45,11 +45,11 @@ export function Footer() {
             {/* Contact Info */}
             <div className="space-y-3">
               <a
-                href="tel:+18297620670"
+                href="tel:+18633594147"
                 className="flex items-center gap-3 text-sm text-text-muted hover:text-accent transition-colors"
               >
                 <Phone className="h-4 w-4" />
-                +1 (829) 762-0670
+                +1 (863) 359-4147
               </a>
               <div className="flex items-center gap-3 text-sm text-text-muted">
                 <MapPin className="h-4 w-4 shrink-0" />

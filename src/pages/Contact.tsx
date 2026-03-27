@@ -229,9 +229,9 @@ export function Contact() {
               <div className="glass-card p-6">
                 <h3 className="text-base font-bold text-text-primary mb-4">Quick Contact</h3>
                 <div className="space-y-4">
-                  <a href="tel:+18297620670" className="flex items-center gap-3 text-sm text-text-secondary hover:text-accent transition-colors">
+                  <a href="tel:+18633594147" className="flex items-center gap-3 text-sm text-text-secondary hover:text-accent transition-colors">
                     <Phone className="h-4 w-4 text-brand-mid" />
-                    +1 (829) 762-0670
+                    +1 (863) 359-4147
                   </a>
                   <div className="flex items-center gap-3 text-sm text-text-secondary">
                     <MapPin className="h-4 w-4 text-brand-mid shrink-0" />
