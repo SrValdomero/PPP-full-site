@@ -10,17 +10,11 @@ const values = [
   { icon: Shield, title: 'Integrity', description: 'If your problem needs a different solution, we\'ll tell you — even if it means referring you elsewhere.' },
 ]
 
-const team = [
-  { name: 'Rafael Méndez', role: 'Founder & CEO', expertise: 'Sales Strategy, AI Implementation', initials: 'RM' },
-  { name: 'Laura Chen', role: 'Head of Programs', expertise: 'Organizational Development', initials: 'LC' },
-  { name: 'Marcus Thompson', role: 'AI Lead', expertise: 'Machine Learning, Business Automation', initials: 'MT' },
-  { name: 'Sofia Alvarado', role: 'Client Success Director', expertise: 'Account Management, Training', initials: 'SA' },
-]
+
 
 export function About() {
   const { ref: missionRef, isInView: missionInView } = useInView()
   const { ref: valuesRef, isInView: valuesInView } = useInView()
-  const { ref: teamRef, isInView: teamInView } = useInView()
 
   return (
     <>
@@ -141,45 +135,7 @@ export function About() {
         </div>
       </section>
 
-      <div className="section-divider" />
 
-      {/* Team */}
-      <section ref={teamRef} className="relative" id="team">
-        <div className="section-container">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            animate={teamInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5 }}
-          >
-            <h2>
-              The <span className="gradient-text">Team</span>
-            </h2>
-            <p className="mt-4 text-text-secondary max-w-xl mx-auto">
-              Operators, not consultants. Every team member has direct experience
-              building and scaling commercial teams.
-            </p>
-          </motion.div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {team.map((member, i) => (
-              <motion.div
-                key={member.name}
-                className="glass-card p-6 text-center group"
-                initial={{ opacity: 0, y: 20 }}
-                animate={teamInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.4, delay: i * 0.1 }}
-              >
-                <div className="h-20 w-20 rounded-2xl bg-gradient-to-br from-brand-dark to-brand-mid flex items-center justify-center mx-auto mb-4 group-hover:scale-105 transition-transform">
-                  <span className="text-xl font-bold text-white">{member.initials}</span>
-                </div>
-                <h3 className="text-base font-bold text-text-primary">{member.name}</h3>
-                <p className="text-sm text-brand-mid mt-1">{member.role}</p>
-                <p className="text-xs text-text-muted mt-2">{member.expertise}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
     </>
   )
 }

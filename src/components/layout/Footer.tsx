@@ -4,7 +4,6 @@ import { ArrowUpRight, Phone, MapPin, ExternalLink, Globe } from 'lucide-react'
 const footerLinks = {
   company: [
     { label: 'About Us', path: '/about' },
-    { label: 'Our Team', path: '/about#team' },
     { label: 'Careers', path: '/about#careers' },
     { label: 'Contact', path: '/contact' },
   ],

@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Player } from '@remotion/player';
 import { MarthaAnimation } from '../components/Martha/MarthaAnimation';
 import { Brain, Zap, Search, CheckCircle, TrendingUp, Bot, ArrowRight, Waves, Sparkles } from 'lucide-react';
@@ -161,9 +162,10 @@ export function MarthaAI() {
             <p className="text-text-secondary text-lg leading-relaxed mb-8">
               We know the sheer volume of new AI tools can feel like a tsunami. That's why we've designed Martha to be your steadfast anchor and your surfboard. Don't drown in the noise of fragmented applications. Ride the wave of innovation with a single, elite operational partner that transforms generic AI power into targeted, practical business results.
             </p>
-            <button className="btn-primary w-full justify-center">
+            <Link to="/contact" className="btn-primary w-full justify-center">
               Request a Martha Demo
-            </button>
+              <ArrowRight className="h-4 w-4" />
+            </Link>
           </motion.div>
         </div>
       </section>
