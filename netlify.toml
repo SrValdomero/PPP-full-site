@@ -1,0 +1,16 @@
+[build]
+  command   = "npm run build"
+  publish   = "dist"
+
+# Redirects: send all routes to index.html for SPA routing
+[[redirects]]
+  from   = "/*"
+  to     = "/index.html"
+  status = 200
+
+# Secrets scanning config
+# VITE_ env vars are intentionally bundled into the JS output by Vite.
+# We exclude the compiled dist output from scanning — it is generated code,
+# not secrets that were carelessly committed.
+[build.environment]
+  SECRETS_SCAN_OMIT_PATHS = "dist"
