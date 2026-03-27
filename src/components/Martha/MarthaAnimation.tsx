@@ -39,8 +39,7 @@ function fadeIn(frame: number, fps: number, startSec = 0, durationSec = 0.5) {
   );
 }
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-function slideUp(frame: number, fps: number, startSec = 0, durationSec = 0.6) {
+function slideUp(frame: number, fps: number, startSec = 0, _durationSec = 0.6) {
   const progress = spring({
     frame: frame - startSec * fps,
     fps,
@@ -495,65 +494,6 @@ const ConnectionLine: React.FC<{
   );
 };
 
-// ─────────────────────────── Integration Badge ───────────────────────────
-
-const IntegrationBadge: React.FC<{
-  label: string;
-  icon: string;
-  x: number;
-  y: number;
-  delay: number;
-}> = ({ label, icon, x, y, delay }) => {
-  const frame = useCurrentFrame();
-  const { fps } = useVideoConfig();
-  const localFrame = frame - delay * fps;
-
-  const scale = spring({
-    frame: localFrame,
-    fps,
-    config: { damping: 12, stiffness: 150 },
-  });
-  const opacity = interpolate(localFrame, [0, 0.3 * fps], [0, 1], {
-    extrapolateLeft: "clamp",
-    extrapolateRight: "clamp",
-  });
-
-  if (localFrame < -5) return null;
-
-  return (
-    <div
-      style={{
-        position: "absolute",
-        left: x,
-        top: y,
-        transform: `scale(${scale})`,
-        opacity,
-        background: "rgba(255,255,255,0.08)",
-        border: `1px solid rgba(255,255,255,0.15)`,
-        borderRadius: 16,
-        padding: "12px 24px",
-        display: "flex",
-        alignItems: "center",
-        gap: 10,
-        backdropFilter: "blur(10px)",
-        boxShadow: `0 4px 20px rgba(0,0,0,0.3)`,
-        whiteSpace: "nowrap",
-      }}
-    >
-      <span style={{ fontSize: 28 }}>{icon}</span>
-      <span
-        style={{
-          color: WHITE,
-          fontSize: 22,
-          fontFamily: "'Inter', sans-serif",
-          fontWeight: 600,
-        }}
-      >
-        {label}
-      </span>
-    </div>
-  );
-};
 
 // ─────────────────────────── SCENE 1 — Hero Introduction ───────────────────────────
 
