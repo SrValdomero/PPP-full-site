@@ -31,7 +31,7 @@ export function Footer() {
           <div className="lg:col-span-4">
             <Link to="/" className="flex items-center gap-3 mb-6">
               <div className="flex items-center gap-1">
-                <img src="/src/assets/ppp logo.png" alt="PPP Enterprise Logo" className="h-10 w-auto object-contain" />
+                <img src="/ppp-logo.png" alt="PPP Enterprise Logo" className="h-10 w-auto object-contain" />
               </div>
               <span className="text-sm font-semibold text-text-muted tracking-wide uppercase">
                 Enterprise

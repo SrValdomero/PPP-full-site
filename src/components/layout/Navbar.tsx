@@ -46,7 +46,7 @@ export function Navbar() {
           aria-label="PPP Enterprise Home"
         >
           <div className="flex items-center gap-1">
-            <img src="/src/assets/ppp logo.png" alt="PPP Enterprise Logo" className="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105" />
+            <img src="/ppp-logo.png" alt="PPP Enterprise Logo" className="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105" />
           </div>
           <div className="hidden sm:block">
             <span className="text-sm font-semibold text-text-muted tracking-wide uppercase">

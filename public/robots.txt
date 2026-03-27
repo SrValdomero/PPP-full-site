@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Block admin and API routes
+Disallow: /api/
+Disallow: /.netlify/
+
+# Sitemap
+Sitemap: https://pppenterprise.com/sitemap.xml
